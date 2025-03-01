@@ -31,7 +31,7 @@ class node
      * @param field to search
      * @return a vector of the books found
      */
-    std::vector<game> searchNode(const std::string& target, field f);
+    bool searchNode(const std::string& target, field f);
 
         /**
      * @brief search for a node in the linked list
@@ -39,7 +39,7 @@ class node
      * @return true if the ID found else false
      */
 
-
+    bool deleteNode(const std::string& target);
 
 
     private:

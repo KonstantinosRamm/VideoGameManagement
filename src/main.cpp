@@ -14,7 +14,6 @@ int main(void)
     testGame.Game[Publisher] = "Test Publisher";
     testGame.Game[ReleaseYear] = "2021";
 
-
     //check for exceptions during memory allocation
     try{
         for(int i = 0; i < 50000; i++)
@@ -27,17 +26,22 @@ int main(void)
     {
         std::cerr << ERROR << e.what() << RESET << std::endl;
     }
-    std::vector <game> found = ll.searchNode("Test Game", Title);
-
-
-    //test search method 
-    for(int i = 0; i < found.size(); i++)
+    //search for a game in the list
+    if(ll.searchNode("1", GameID))
     {
-        std::cout << found[i];
+        std::cout << SUCCESS << "Game found" << RESET << std::endl;
+    }
+    else
+    {
+        std::cerr << ERROR << "Game not found" << RESET << std::endl;
     }
 
     //todo -> implement destroy method to free memory of the current node processed (will be implemented by game ID for safety reasons)
     //to ensure no wrong entries deleted from the list
+
+    ll.deleteNode("1");
+    ll.deleteNode("1");
+    ll.deleteNode("1");
 
  return 0;
 }
