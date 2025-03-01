@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/konstantinosrammos/Documents/VideoGameManagement/src/ll.cpp" "CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o" "gcc" "CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o.d"
   "/home/konstantinosrammos/Documents/VideoGameManagement/src/main.cpp" "CMakeFiles/VideoGameManagement.dir/src/main.cpp.o" "gcc" "CMakeFiles/VideoGameManagement.dir/src/main.cpp.o.d"
+  "/home/konstantinosrammos/Documents/VideoGameManagement/src/videogame.cpp" "CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o" "gcc" "CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

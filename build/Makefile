@@ -129,6 +129,30 @@ VideoGameManagement/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/build
 .PHONY : VideoGameManagement/fast
 
+src/ll.o: src/ll.cpp.o
+.PHONY : src/ll.o
+
+# target to build an object file
+src/ll.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o
+.PHONY : src/ll.cpp.o
+
+src/ll.i: src/ll.cpp.i
+.PHONY : src/ll.i
+
+# target to preprocess a source file
+src/ll.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/src/ll.cpp.i
+.PHONY : src/ll.cpp.i
+
+src/ll.s: src/ll.cpp.s
+.PHONY : src/ll.s
+
+# target to generate assembly for a file
+src/ll.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/src/ll.cpp.s
+.PHONY : src/ll.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -153,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/videogame.o: src/videogame.cpp.o
+.PHONY : src/videogame.o
+
+# target to build an object file
+src/videogame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o
+.PHONY : src/videogame.cpp.o
+
+src/videogame.i: src/videogame.cpp.i
+.PHONY : src/videogame.i
+
+# target to preprocess a source file
+src/videogame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.i
+.PHONY : src/videogame.cpp.i
+
+src/videogame.s: src/videogame.cpp.s
+.PHONY : src/videogame.s
+
+# target to generate assembly for a file
+src/videogame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.s
+.PHONY : src/videogame.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... VideoGameManagement"
+	@echo "... src/ll.o"
+	@echo "... src/ll.i"
+	@echo "... src/ll.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/videogame.o"
+	@echo "... src/videogame.i"
+	@echo "... src/videogame.s"
 .PHONY : help
 
 
