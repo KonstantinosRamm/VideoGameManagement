@@ -1,7 +1,10 @@
 #pragma once
 #include <string>
 #include <array>
+#include "color.hpp"
+#include <iostream>
 #define NUMBER_OF_FIELDS 4
+#define EMPTY ""
 
 
 /**
@@ -22,6 +25,9 @@ enum field{
  * 
  */
 struct game{
+    /**
+     * @brief Game an array of NUMBER_OF_FIELDS fields used to store the game 
+     */
     std::array<std::string, NUMBER_OF_FIELDS> Game;
 
     /**
@@ -30,7 +36,12 @@ struct game{
      * @param f the field enum
      * @return the string corresponding to the enum
      */
-    std::string& operator [](field f) const;
+    std::string & operator [](field f);
+    /**
+     * @brief Overload operator<< to print the game data
+     * @param os instance of ostream object (std::cout)
+     */
+    friend std::ostream& operator << (std::ostream& os,const game & g);
 
     
 };
