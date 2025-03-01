@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/VideoGameManagement.dir/src/main.cpp.o -o bin/VideoGameManagement

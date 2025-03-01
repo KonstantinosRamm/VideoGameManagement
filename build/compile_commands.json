@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/konstantinosrammos/Documents/VideoGameManagement/build",
+  "command": "/usr/bin/g++  -I/home/konstantinosrammos/Documents/VideoGameManagement/include -g -std=gnu++17 -o CMakeFiles/VideoGameManagement.dir/src/main.cpp.o -c /home/konstantinosrammos/Documents/VideoGameManagement/src/main.cpp",
+  "file": "/home/konstantinosrammos/Documents/VideoGameManagement/src/main.cpp",
+  "output": "CMakeFiles/VideoGameManagement.dir/src/main.cpp.o"
+}
+]
