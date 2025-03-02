@@ -29,11 +29,16 @@ class linkedlist
      */
     ~linkedlist();
 
-
+    /**
+     * @brief method used to delete data based on GameID to ensure safety in data handling since Game id is unique for each game
+     * @param g game to be deleted (requires the game to have GameID field)
+     */
+    
+    bool deleteNode(game &g);
 
     /**
      * @brief insert method to insert in linked list
-     * @param gthe game to be inserted
+     * @param g game to be inserted
      */
     bool insert(game &g);
 
