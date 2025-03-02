@@ -1,3 +1,0 @@
-/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles/VideoGameManagement.dir
-/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles/edit_cache.dir
-/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles/rebuild_cache.dir
