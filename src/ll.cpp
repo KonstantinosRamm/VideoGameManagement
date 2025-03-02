@@ -42,6 +42,55 @@ bool linkedlist::insert(game &g)
 }
 
 
+//delete node method 
+bool linkedlist::deleteNode(game &g)
+{
+    node *currentNode = this->head.next;
+    node *prevNode = nullptr;
+
+    //iterate over the list to find the node with the containing GameID
+    while(currentNode != nullptr)
+    {
+        if(currentNode->data.Game[GameID] == g.Game[GameID])
+        {
+            //case : deleting the head node
+            if(prevNode == nullptr)
+            {
+                this->head.next = currentNode->next;
+            }
+            //case : not in head node
+            else
+            {
+                prevNode->next = currentNode->next;
+            }
+            delete currentNode;
+            return true;
+        }
+        //move pointers by one position
+        prevNode = currentNode;
+        currentNode = currentNode->next;
+    }
+    return false;
+}
+
+
+//method to search node 
+bool linkedlist::searchNode(std::string target,field f)
+{
+    node * iterator = this->head.next;
+
+    while(iterator != nullptr)
+    {
+        if(iterator->data.Game[f] == target) { return true; } 
+        //move iterator to the next node
+        iterator = iterator->next;  
+    }
+
+    return false;
+}
+
+
+
 
 
 
