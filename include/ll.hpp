@@ -5,53 +5,41 @@
 #include <vector>
 
 /**
+ * @brief struct to represent singly linked list
+ */
+struct node{
+    game data;
+    node *next;
+};
+/**
  * @brief class used to store the games as a linked list
  * 
  */
-class node
+
+
+class linkedlist
 {
     public:
     /**
-     * @brief constructor: initializes the fields of the node to empty and the pointer to the next node
+     * @brief constructor for the linked list
      */
-    node();
+    linkedlist();
+    /**
+     * @brief destructor for the linked list
+     */
+    ~linkedlist();
+
+
 
     /**
-     * @brief insert a game into the linked list
-     * 
-     * @param GameData the game to be inserted
-     * @return true if the game was inserted successfully
+     * @brief insert method to insert in linked list
+     * @param gthe game to be inserted
      */
-
-    bool insertNode(game& GameData);
-
-    /**
-     * @brief search for a node in the linked list
-     * @param target the string to be searched for
-     * @param field to search
-     * @return a vector of the books found
-     */
-    bool searchNode(const std::string& target, field f);
-
-        /**
-     * @brief search for a node in the linked list
-     * @param target the string to be searched for (based on Game ID to ensure data handling safety)
-     * @return true if the ID found else false
-     */
-
-    bool deleteNode(const std::string& target);
-
+    bool insert(game &g);
 
     private:
-    /** 
-     * @brief data about video game
-    */
-    
-    game data;
     /**
-     * pointer to next node
+     * @brief head is a dummy node used to provide an easy entry point in the linked list 
      */
-    node *next;
-
-
+    node head;
 };

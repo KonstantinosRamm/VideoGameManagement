@@ -1,4 +1,12 @@
 # VideoGameManagement
 
 ## todo:
-* Implement destroy method to delete a node (only applicable for GameID field to ensure safety on data handling).
+* Implemplement delete, search for linked list 
+* Implement delete by using GameID for safe data handling
+* Ensure not duplicates exist by comparing GameID
+
+
+##challenges so far faced
+* Segmentation faults during destructor of linked list
+* Implement a way to delete fields with a safe way without deleting unwanted entries
+

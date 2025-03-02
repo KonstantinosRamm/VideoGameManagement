@@ -1,11 +1,23 @@
 #include <iostream>
 #include "ll.hpp"
 #include "videogame.hpp"
-#include "hashtable.hpp"
 #include "color.hpp"
 
 
 int main(void)
 {
- return 0;
+    linkedlist testll;
+    game testgame;
+    testgame.Game[GameID] = "1";
+
+    testll.insert(testgame);
+    testll.insert(testgame);
+    testll.insert(testgame);
+    testll.insert(testgame);
+    testll.insert(testgame);
+    testll.insert(testgame);
+    testll.insert(testgame);
+
+    
+    return 0;
 }
