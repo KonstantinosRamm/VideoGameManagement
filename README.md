@@ -20,11 +20,11 @@ git clone https://github.com/KonstantinosRamm/VideoGameManagement.git
 ```
 
 ```bash
-cd VideoGameManagement/build
+cd VideoGameManagement
 ```
 
 ```bash
-mkdir build
+mkdir build && cd build
 ```
 
 ```bash
