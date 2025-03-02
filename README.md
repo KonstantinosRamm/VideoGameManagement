@@ -20,19 +20,11 @@ git clone https://github.com/KonstantinosRamm/VideoGameManagement.git
 ```
 
 ```bash
-cd VideoGameManagement
+cd VideoGameManagement/build
 ```
 
 ```bash
-cd build
-```
-
-```bash
-cmake ..
-```
-
-```bash
-make
+cmake .. && make
 ```
 
 # How to run:

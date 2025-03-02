@@ -18,3 +18,15 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # Create the executable
 add_executable(VideoGameManagement ${SOURCES})
+
+# Specify the path for the file to be created
+set(FILE_PATH "${CMAKE_BINARY_DIR}/bin/Library.txt")
+
+# Ensure the bin directory exists
+file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+
+# Create the file if it doesn't exist (empty file)
+if(NOT EXISTS ${FILE_PATH})
+    file(WRITE ${FILE_PATH} "")
+endif()
+
