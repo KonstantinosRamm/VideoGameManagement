@@ -14,10 +14,35 @@
 Before you can compile and run this program, you need to have the following installed:
 - **CMake** (version 3.10 or higher)
 - **g++** (GNU C++ compiler C++17 standard)
-# How to run:
+# How to compile:
 ```bash
 git clone https://github.com/KonstantinosRamm/VideoGameManagement.git
 ```
+
+```bash
+cd VideoGameManagement
+```
+
+```bash
+cd build
+```
+
+```bash
+cmake ..
+```
+
+```bash
+make
+```
+
+# How to run:
+```bash
+./bin/VideoGameManagement
+```
+
+
+
+
 
 
 
