@@ -24,6 +24,10 @@ cd VideoGameManagement/build
 ```
 
 ```bash
+mkdir build
+```
+
+```bash
 cmake .. && make
 ```
 
