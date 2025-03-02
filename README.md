@@ -6,7 +6,7 @@
 * Ensure not duplicates exist by comparing GameID
 
 
-##challenges so far faced
+## challenges faced so far
 * Segmentation faults during destructor of linked list
 * Implement a way to delete fields with a safe way without deleting unwanted entries
 
