@@ -16,6 +16,7 @@ node::node()
 
 bool node::searchNode(const std::string& target, field f)
 {
+    
     bool results = false;
     node* temp = this->next;
 
@@ -35,10 +36,14 @@ bool node::searchNode(const std::string& target, field f)
 
 //insert
 bool node::insertNode(game& GameData)
-{
+{   
+
 
     //first check if the element we try to insert is already in the list by checking the game ID
     bool found = this->searchNode(GameData[GameID], GameID);
+
+
+    
     if(found)
     {
         std::cerr << ERROR << "[ERROR] Game already in the list" << RESET << std::endl;

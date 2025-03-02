@@ -69,10 +69,24 @@ include CMakeFiles/VideoGameManagement.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/VideoGameManagement.dir/flags.make
 
+CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o: CMakeFiles/VideoGameManagement.dir/flags.make
+CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o: /home/konstantinosrammos/Documents/VideoGameManagement/src/hashtable.cpp
+CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o: CMakeFiles/VideoGameManagement.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o -MF CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o.d -o CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o -c /home/konstantinosrammos/Documents/VideoGameManagement/src/hashtable.cpp
+
+CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantinosrammos/Documents/VideoGameManagement/src/hashtable.cpp > CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.i
+
+CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantinosrammos/Documents/VideoGameManagement/src/hashtable.cpp -o CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.s
+
 CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o: CMakeFiles/VideoGameManagement.dir/flags.make
 CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o: /home/konstantinosrammos/Documents/VideoGameManagement/src/ll.cpp
 CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o: CMakeFiles/VideoGameManagement.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o -MF CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o.d -o CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o -c /home/konstantinosrammos/Documents/VideoGameManagement/src/ll.cpp
 
 CMakeFiles/VideoGameManagement.dir/src/ll.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/VideoGameManagement.dir/src/ll.cpp.s: cmake_force
 CMakeFiles/VideoGameManagement.dir/src/main.cpp.o: CMakeFiles/VideoGameManagement.dir/flags.make
 CMakeFiles/VideoGameManagement.dir/src/main.cpp.o: /home/konstantinosrammos/Documents/VideoGameManagement/src/main.cpp
 CMakeFiles/VideoGameManagement.dir/src/main.cpp.o: CMakeFiles/VideoGameManagement.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VideoGameManagement.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VideoGameManagement.dir/src/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VideoGameManagement.dir/src/main.cpp.o -MF CMakeFiles/VideoGameManagement.dir/src/main.cpp.o.d -o CMakeFiles/VideoGameManagement.dir/src/main.cpp.o -c /home/konstantinosrammos/Documents/VideoGameManagement/src/main.cpp
 
 CMakeFiles/VideoGameManagement.dir/src/main.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/VideoGameManagement.dir/src/main.cpp.s: cmake_force
 CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o: CMakeFiles/VideoGameManagement.dir/flags.make
 CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o: /home/konstantinosrammos/Documents/VideoGameManagement/src/videogame.cpp
 CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o: CMakeFiles/VideoGameManagement.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o -MF CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o.d -o CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o -c /home/konstantinosrammos/Documents/VideoGameManagement/src/videogame.cpp
 
 CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.i: cmake_force
@@ -113,6 +127,7 @@ CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.s: cmake_force
 
 # Object files for target VideoGameManagement
 VideoGameManagement_OBJECTS = \
+"CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o" \
 "CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o" \
 "CMakeFiles/VideoGameManagement.dir/src/main.cpp.o" \
 "CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o"
@@ -120,12 +135,13 @@ VideoGameManagement_OBJECTS = \
 # External object files for target VideoGameManagement
 VideoGameManagement_EXTERNAL_OBJECTS =
 
+bin/VideoGameManagement: CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o
 bin/VideoGameManagement: CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o
 bin/VideoGameManagement: CMakeFiles/VideoGameManagement.dir/src/main.cpp.o
 bin/VideoGameManagement: CMakeFiles/VideoGameManagement.dir/src/videogame.cpp.o
 bin/VideoGameManagement: CMakeFiles/VideoGameManagement.dir/build.make
 bin/VideoGameManagement: CMakeFiles/VideoGameManagement.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/VideoGameManagement"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable bin/VideoGameManagement"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VideoGameManagement.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

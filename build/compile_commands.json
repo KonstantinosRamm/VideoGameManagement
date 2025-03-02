@@ -1,6 +1,12 @@
 [
 {
   "directory": "/home/konstantinosrammos/Documents/VideoGameManagement/build",
+  "command": "/usr/bin/g++  -I/home/konstantinosrammos/Documents/VideoGameManagement/include -g -std=gnu++17 -o CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o -c /home/konstantinosrammos/Documents/VideoGameManagement/src/hashtable.cpp",
+  "file": "/home/konstantinosrammos/Documents/VideoGameManagement/src/hashtable.cpp",
+  "output": "CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o"
+},
+{
+  "directory": "/home/konstantinosrammos/Documents/VideoGameManagement/build",
   "command": "/usr/bin/g++  -I/home/konstantinosrammos/Documents/VideoGameManagement/include -g -std=gnu++17 -o CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o -c /home/konstantinosrammos/Documents/VideoGameManagement/src/ll.cpp",
   "file": "/home/konstantinosrammos/Documents/VideoGameManagement/src/ll.cpp",
   "output": "CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o"

@@ -81,12 +81,12 @@ clean: CMakeFiles/VideoGameManagement.dir/clean
 CMakeFiles/VideoGameManagement.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VideoGameManagement.dir/build.make CMakeFiles/VideoGameManagement.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=1,2,3,4 "Built target VideoGameManagement"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target VideoGameManagement"
 .PHONY : CMakeFiles/VideoGameManagement.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/VideoGameManagement.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/VideoGameManagement.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/konstantinosrammos/Documents/VideoGameManagement/build/CMakeFiles 0
 .PHONY : CMakeFiles/VideoGameManagement.dir/rule

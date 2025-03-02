@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o"
+  "CMakeFiles/VideoGameManagement.dir/src/hashtable.cpp.o.d"
   "CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o"
   "CMakeFiles/VideoGameManagement.dir/src/ll.cpp.o.d"
   "CMakeFiles/VideoGameManagement.dir/src/main.cpp.o"
