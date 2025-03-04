@@ -52,5 +52,12 @@ class hashtable
      */
     size_t hash(const game& g,field f);
 
+    /** @brief  overloaded hash function to hash a string instead of whole book
+     *  @param ID the target ID we want to delete 
+    */
+
+
+    size_t hash(const std::string& ID);
+
 
 };

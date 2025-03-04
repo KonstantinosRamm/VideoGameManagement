@@ -48,6 +48,14 @@ class linkedlist
      */
     bool insert(const game &g);
 
+
+
+    /**
+     * @brief retrieve the searched node based on GameID 
+     * @param ID of the game
+     */
+    game retrieve(const std::string & ID);
+
     private:
     /**
      * @brief head is a dummy node used to provide an easy entry point in the linked list 

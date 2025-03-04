@@ -96,6 +96,29 @@ bool linkedlist::searchNode(std::string target,field f)
     return result;
 }
 
+//retrieve method
+game linkedlist::retrieve(const std::string & ID)
+{
+    node *iterator = this->head.next;
+    while(iterator != nullptr)
+    {
+        //find node with that id
+        if(iterator->data[GameID] == ID)
+        {
+            return iterator->data;
+        }
+        //continue iteration if not found
+        iterator = iterator->next;
+    }
+    //else create an empty game and return it to indicate that no target found
+    game temp;
+    for(int i = 0; i < NUMBER_OF_FIELDS; i++)
+    {
+        temp.Game[i] = EMPTY;
+    }
+    return temp;
+}
+
 
 
 
