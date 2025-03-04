@@ -1,9 +1,8 @@
 # VideoGameManagement
 
 ## todo:
-* Implemplement delete, search for linked list ✓ 
-* Implement delete by using GameID for safe data handling ✓
-
+*implement delete and search method for hashtable 
+*implement Murmur hash
 
 
 ## challenges faced so far

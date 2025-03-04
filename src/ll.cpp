@@ -26,7 +26,7 @@ linkedlist::~linkedlist()
 }
 
 //insert method
-bool linkedlist::insert(game &g)
+bool linkedlist::insert(const game &g)
 {
     node * temp = new node ;
     //check for allocation fail

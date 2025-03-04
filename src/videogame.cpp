@@ -20,3 +20,15 @@ std::ostream& operator<<(std::ostream& os, const game& g)
     return os;
 }
 
+
+
+
+//constructor
+game::game()
+{
+    for(int i = 0; i < NUMBER_OF_FIELDS; i++)
+    {
+        this->Game[i] = EMPTY;
+    }
+}
+

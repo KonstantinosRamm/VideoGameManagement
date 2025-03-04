@@ -46,7 +46,7 @@ class linkedlist
      * @brief insert method to insert in linked list
      * @param g game to be inserted
      */
-    bool insert(game &g);
+    bool insert(const game &g);
 
     private:
     /**

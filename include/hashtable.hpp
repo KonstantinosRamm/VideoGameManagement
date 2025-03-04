@@ -2,7 +2,8 @@
 #include "color.hpp"
 #include "ll.hpp"
 #include "videogame.hpp"
-#define TABLE_SIZE 1007 //a random prime for better distribution of data and less change of collisions
+#include <string>
+#define TABLE_SIZE 997 //a random prime for better distribution of data and less change of collisions
 
 
 
@@ -12,9 +13,8 @@ class hashtable
     /**
      * @brief hash table method used to insert data on each table
      * @param g game to be inserted
-     * @param f field to insert
      */
-    bool insert(const game& g,field f);
+    bool insert(const game& g);
 
 
     /**
@@ -36,9 +36,9 @@ class hashtable
      */
     private:
     /**
-     * @brief an array to represent the table used for each field
+     * @brief matrix to represent the table used for each field
      */
-    linkedlist tables[NUMBER_OF_FIELDS];
+    linkedlist table[NUMBER_OF_FIELDS][TABLE_SIZE];
 
 
 };
