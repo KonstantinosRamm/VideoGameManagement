@@ -78,15 +78,22 @@ bool linkedlist::deleteNode(game &g)
 bool linkedlist::searchNode(std::string target,field f)
 {
     node * iterator = this->head.next;
-
+    bool result = false;
+    size_t ctr = 1;
     while(iterator != nullptr)
     {
-        if(iterator->data.Game[f] == target) { return true; } 
-        //move iterator to the next node
+        //print data 
+        if(iterator->data.Game[f] == target) 
+        { 
+            std::cout << ctr << " : " << iterator->data;
+            ctr++;
+            result = true;
+        }
+        //move iterator to the next node and continue searching
         iterator = iterator->next;  
     }
 
-    return false;
+    return result;
 }
 
 

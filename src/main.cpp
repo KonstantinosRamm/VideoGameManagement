@@ -7,11 +7,7 @@
 
 int main(void)
 {
-    hashtable test;
-    game testGame;
-    testGame[Title] = "123";
 
-    test.insert(testGame);
-    test.insert(testGame);
+
     return 0;
 }
