@@ -1,7 +1,6 @@
 # VideoGameManagement
 
-## todo:
-*implement delete and search method for hashtable 
+## todo: 
 *implement Murmur hash
 
 

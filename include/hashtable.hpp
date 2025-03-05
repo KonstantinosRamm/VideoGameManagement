@@ -13,6 +13,8 @@ class hashtable
     /**
      * @brief hash table method used to insert data on each table
      * @param g game to be inserted
+     * @return true if operation succeeded and false if failed
+     * 
      */
     bool insert(const game& g);
 
@@ -22,14 +24,25 @@ class hashtable
     /**
      * @brief delete function :deletes data by GameID to ensure safety in data handling.it deletes the data only on the GameID table
      * @param target string to search for deletion 
+     * @return true if operation succeeded and false if failed
+     * 
      */
 
      bool deleteGame(const std::string& target);
 
     
     /**
-     * @brief search function used to search for entries based on given string
+     * @brief search function used to search for entries based on given string (it will find all entries with the keyword)
      * @param target the string to be checked for 
+     * @return true if operation succeeded and false if failed
+     */
+    bool searchAllFields(const std::string& target);
+
+    /**
+     * @brief search function used to search for entries based on a field and a target string
+     * @param target the string to be checked for 
+     * @param f field to search
+     * @return true if operation succeeded and false if failed
      */
     bool search(const std::string& target,field f);
 
@@ -49,11 +62,14 @@ class hashtable
      * @brief hash function to hash a games field and return the index where it should be inserted
      * @param g the game to be used
      * @param f the field to be hashed
+     * @return the index computed during the hash operation
+     * 
      */
     size_t hash(const game& g,field f);
 
     /** @brief  overloaded hash function to hash a string instead of whole book
      *  @param ID the target ID we want to delete 
+     * @return the index computed during the hash operation
     */
 
 

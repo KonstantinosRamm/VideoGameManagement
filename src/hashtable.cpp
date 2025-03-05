@@ -98,3 +98,34 @@ bool hashtable::deleteGame(const std::string& target)
 }
 
 
+
+//search function (all fields)
+bool hashtable::searchAllFields(const std::string& target)
+{
+    int result = false;
+    for(int f = 0; f < NUMBER_OF_FIELDS; f++)
+    {
+        size_t index = hash(target);
+        if(this->table[f][index].searchNode(target,static_cast<field>(f)) == true )
+        {
+            result = true;
+        }
+
+    }
+
+    //if we found target in any of the fields then return true 
+    return result;
+
+}
+
+
+//search function  1 field
+bool hashtable::search(const std::string& target,field f)
+{
+    size_t index = hash(target);
+    return this->table[f][index].searchNode(target,f);
+}
+
+
+
+
