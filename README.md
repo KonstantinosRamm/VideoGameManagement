@@ -1,7 +1,7 @@
 # VideoGameManagement
 
 ## todo: 
-*implement Murmur hash
+*implement Murmur hash 32 bit
 
 
 ## challenges faced so far

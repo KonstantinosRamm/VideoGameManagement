@@ -26,13 +26,13 @@ int main(void)
     Game3.Game[Publisher] = "123";
     Game3.Game[ReleaseYear] = "";
 
-
+    t.insert(Game);
     t.insert(Game);
     t.insert(Game2);
     t.insert(Game3);
 
-    //t.searchAllFields("123");
-    //t.deleteGame("123");
+    t.searchAllFields("123");
+    t.deleteGame("123");
     t.search("123",GameID);
     
     /* implement search function */

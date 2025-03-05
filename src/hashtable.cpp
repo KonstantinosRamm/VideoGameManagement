@@ -2,23 +2,6 @@
 
 
 
-/*
-    TODO: IMPLEMENT MURMUR HASH INSTEAD
-*/
-size_t hashtable::hash(const game& g,field f)
-{
-
-    size_t target_size = g.Game[f].size();
-    size_t index = 0;
-    for(int i = 0; i < target_size; i++)
-    {
-
-        index += g.Game[f][i];
-    }
-
-    return index % TABLE_SIZE;
-}
-
 size_t hashtable::hash(const std::string& ID)
 {
     size_t target_size = ID.size();
@@ -125,6 +108,7 @@ bool hashtable::search(const std::string& target,field f)
     size_t index = hash(target);
     return this->table[f][index].searchNode(target,f);
 }
+
 
 
 

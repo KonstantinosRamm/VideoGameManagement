@@ -48,7 +48,7 @@ class linkedlist
      */
     bool insert(const game &g);
 
-
+    
 
     /**
      * @brief retrieve the searched node based on GameID 

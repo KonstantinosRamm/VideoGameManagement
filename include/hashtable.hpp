@@ -3,6 +3,7 @@
 #include "ll.hpp"
 #include "videogame.hpp"
 #include <string>
+#include <vector>
 #define TABLE_SIZE 997 //a random prime for better distribution of data and less change of collisions
 
 
@@ -46,6 +47,7 @@ class hashtable
      */
     bool search(const std::string& target,field f);
 
+
     /**
      * @brief search function used to search all tables to find data based on the given field
      */
@@ -65,12 +67,7 @@ class hashtable
      * @return the index computed during the hash operation
      * 
      */
-    size_t hash(const game& g,field f);
 
-    /** @brief  overloaded hash function to hash a string instead of whole book
-     *  @param ID the target ID we want to delete 
-     * @return the index computed during the hash operation
-    */
 
 
     size_t hash(const std::string& ID);
