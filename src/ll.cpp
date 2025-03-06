@@ -91,6 +91,7 @@ bool linkedlist::searchNode(std::string target,field f)
         }
         //move iterator to the next node and continue searching
         iterator = iterator->next;  
+        
     }
 
     return result;

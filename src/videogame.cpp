@@ -10,13 +10,13 @@ std::string & game::operator [](field f)
 std::ostream& operator<<(std::ostream& os, const game& g)
 {
     os << SUCCESS;
-
     for (int i = 0; i < NUMBER_OF_FIELDS; i++)
     {
         os << g.Game[i] << " ";
+        
     }
-    os << std::endl;
-    os << RESET;
+    
+    os << RESET << std::endl;
     return os;
 }
 

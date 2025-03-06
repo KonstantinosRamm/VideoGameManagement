@@ -1,16 +1,76 @@
 #include "hashtable.hpp"
 
 
-
+//murmur hash (32bit)
 size_t hashtable::hash(const std::string& ID)
 {
+    //constant multipliers used in murmur hash 
+    //the selected values are empirical and perform very good in avalanche test
+
+    const int BLOCK_SIZE = 4;
+    const uint32_t c1 = 0xcc9e2d51;
+    const uint32_t c2 = 0x1b873593;
+    const uint32_t m =  0x5bd1e995;
+    const uint32_t n =  0x1b873593;
+    const uint32_t seed = 0xDEADBEEF;
     size_t target_size = ID.size();
-    size_t index = 0;
-    
-    for(int i = 0; i < target_size; i++)
+    const size_t remainingBits = target_size % BLOCK_SIZE;
+    //initialize index to seed
+    size_t index = seed;
+
+    //first stage of murmur hash
+    //shift all bytes into position
+    for(int i = 0; i < target_size - remainingBits; i+=BLOCK_SIZE)
     {
-        index += ID[i];
+        uint32_t k = 0;
+        k |= (ID[i] << 0);      //8bits
+        k |= (ID[i+1] << 8);    //8bits
+        k |= (ID[i+2] << 16);   //8bits
+        k |= (ID[i+3] << 24);   //8bits
+
+        //mix block with murmur hash operations 
+        k *=c1;
+        k = (k << 15) | (k >> (32-15));//rotate left by 15 bit
+        k *=c2;
+
+        index ^= k;
+        index = (index << 13) | (index >> (32-13)); //rotate left by 13 bit
+        index = index * m + n;
     }
+
+    //stage 2 : handle remaining bytes
+
+    uint32_t k = 0;
+    switch(remainingBits)
+    {
+        
+        case3://3 remaining
+            k |= ID[target_size-3] << 16;
+            //fallthrough case2
+        case2://2 remaining
+            k |= ID[target_size-2] << 8;
+            //fallthrough case1
+        case 1://1 remaining byte
+            k |= ID[target_size-1] << 0;
+            k *= c1;
+            k |= (k << 15) | (k >> (32 -15));//shift left by 15 bits
+            k*=c2;
+            index ^=k;
+    }
+
+    index ^= target_size;
+    index = index * m + n;
+
+
+
+    //third stage for final avalanche
+    //shift and multiply with mixing constants
+    index ^= (index >> 16);//shift right 16 bit
+    index *= m;
+    index ^= (index >> 13);//shift right 13 bit;
+    index *= n;
+
+
     return index % TABLE_SIZE;
 
 }
@@ -105,7 +165,9 @@ bool hashtable::searchAllFields(const std::string& target)
 //search function  1 field
 bool hashtable::search(const std::string& target,field f)
 {
+
     size_t index = hash(target);
+    std::cout << "--------------------------------------------------------------" << std::endl;
     return this->table[f][index].searchNode(target,f);
 }
 

@@ -4,6 +4,7 @@
 #include "videogame.hpp"
 #include <string>
 #include <vector>
+#include <cstdint>
 #define TABLE_SIZE 997 //a random prime for better distribution of data and less change of collisions
 
 

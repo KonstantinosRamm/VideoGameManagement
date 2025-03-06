@@ -11,20 +11,20 @@ int main(void)
     hashtable t;
     game Game,Game2,Game3;
 
-    Game.Game[GameID] = "123";
-    Game.Game[Title] = "";
-    Game.Game[Publisher] = "TEST";
+    Game.Game[GameID] = "123a";
+    Game.Game[Title] = "TESTGAME";
+    Game.Game[Publisher] = "TESTPUBLISHER";
     Game.Game[ReleaseYear] = "2025";
 
-    Game2.Game[GameID] = "123";
-    Game2.Game[Title] = "";
+    Game2.Game[GameID] = "234";
+    Game2.Game[Title] = "TESTGAMF";
     Game2.Game[Publisher] = "123";
-    Game2.Game[ReleaseYear] = "2026";
+    Game2.Game[ReleaseYear] = "2020";
 
-    Game3.Game[GameID] = "";
-    Game3.Game[Title] = "";
+    Game3.Game[GameID] = "345";
+    Game3.Game[Title] = "TESTGAMG";
     Game3.Game[Publisher] = "123";
-    Game3.Game[ReleaseYear] = "";
+    Game3.Game[ReleaseYear] = "2023";
 
     t.insert(Game);
     t.insert(Game);
