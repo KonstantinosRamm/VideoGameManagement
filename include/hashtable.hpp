@@ -25,6 +25,12 @@ class hashtable
      */
     hashtable();
 
+    /**
+     * @brief destructor 
+     * store the changes in the table in Library.txt 
+     */
+    ~hashtable();
+
      
     /**
      * @brief hash table method used to insert data on each table

@@ -1,7 +1,7 @@
 # VideoGameManagement
 
 ## todo: 
-*implement Murmur hash 32 bit
+*implement destructor to store changes in Library.txt by retrieving GameID table (for more legit results since each game should have a game id)
 
 
 ## challenges faced so far

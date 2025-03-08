@@ -45,9 +45,50 @@ hashtable::hashtable()
         //break if we reached eof 
         if (eof)
         {
+            f.close();
             return;
         }
     }
+
+    f.close();
+}
+
+
+
+//destructor
+hashtable::~hashtable()
+{
+
+    //output file std::ios::out and std::ios::trunc used to create the file if it doesnt exist and trunc to delete all previous content
+    std::ofstream output("Library.txt",std::ios::out | std::ios::trunc);
+
+    std::string input_buffer;
+    std::cout << INFO << "[INFO] Saving..." << RESET << std::endl;
+    //retrieve each list in GameID table
+    for(int i = 0; i < TABLE_SIZE; i++)
+    {
+        input_buffer = EMPTY;
+        //get current linked list
+        node *temp = this->table[GameID][i].getHead();
+
+        while(temp != nullptr)
+        {
+            //right to Library.txt
+            for(int f = 0; f < NUMBER_OF_FIELDS; f++)
+            {
+                input_buffer = temp->data.Game[f];
+                output << input_buffer << std::endl;
+                //append input buffer to the end of the file 
+            }
+
+            temp = temp->next;
+        }
+
+
+    }
+    output.close();
+    std::cout << INFO << "[INFO] Saved..." << RESET << std::endl;
+
 }
 
 

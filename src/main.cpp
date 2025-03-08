@@ -7,9 +7,14 @@
 
 int main(void)
 {
-    std::string x = "12345";
+    
     hashtable games;
-    games.search("1",GameID);
+    game g ;
+    g.Game[GameID] = "123";
+    g.Game[Title] = "TEST";
+    g.Game[ReleaseYear] = "2020";
+
+    games.insert(g);
 
     return 0;
 }

@@ -122,6 +122,14 @@ game linkedlist::retrieve(const std::string & ID)
 
 
 
+//retrieve current head of linked list
+node* linkedlist::getHead()
+{
+    return this->head.next;
+}
+
+
+
 
 
 

@@ -56,6 +56,15 @@ class linkedlist
      */
     game retrieve(const std::string & ID);
 
+
+
+
+    /**
+     * @brief retrieve the whole linked list
+     * @return the current linked list head
+     */
+    node* getHead();
+
     private:
     /**
      * @brief head is a dummy node used to provide an easy entry point in the linked list 
