@@ -1,5 +1,61 @@
 #include "hashtable.hpp"
 
+//constructor
+hashtable::hashtable()
+{
+    game g;
+    this->error_opening_file = false;
+    std::ifstream f("Library.txt");
+    bool eof = false;
+
+    if(!f.is_open())
+    {
+        this->error_opening_file = true;
+        return;
+    }
+
+    //buffer to read each string
+    std::string input_buffer;
+
+    while(true)
+    {
+        input_buffer = EMPTY;
+        //read each string
+        for(int i = 0; i < NUMBER_OF_FIELDS; i++)
+        {
+            if(!std::getline(f, input_buffer))
+            {
+                //end if eof reached
+                eof = true;
+                break;
+            }
+
+            g.Game[i] = input_buffer;
+        }
+
+        //insert the game in each table
+        for(int i = 0; i < NUMBER_OF_FIELDS; i++)
+        {
+            if(g.Game[i] != EMPTY){
+                size_t index = hash(g.Game[i]);
+                this->table[static_cast<field>(i)][index].insert(g);
+            }
+
+        }
+        //break if we reached eof 
+        if (eof)
+        {
+            return;
+        }
+    }
+}
+
+
+bool hashtable::OpenedFile()
+{
+    return this->error_opening_file;
+}
+
 
 //murmur hash (32bit)
 size_t hashtable::hash(const std::string& ID)
@@ -79,6 +135,7 @@ size_t hashtable::hash(const std::string& ID)
 //Insert method
 bool hashtable::insert(const game& g)
 {
+
     bool result = false;
     //hash the index based on field 
     size_t index = 0;

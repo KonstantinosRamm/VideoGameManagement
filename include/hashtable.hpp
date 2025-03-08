@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <cstdint>
+#include <fstream>
 #define TABLE_SIZE 997 //a random prime for better distribution of data and less change of collisions
 
 
@@ -12,6 +13,19 @@
 class hashtable
 {
     public:
+
+
+
+
+
+
+    /**
+     * @brief constructor for hashtable 
+     * 
+     */
+    hashtable();
+
+     
     /**
      * @brief hash table method used to insert data on each table
      * @param g game to be inserted
@@ -19,6 +33,11 @@ class hashtable
      * 
      */
     bool insert(const game& g);
+
+
+    /**
+     * @brief checks 
+     */
 
 
 
@@ -48,7 +67,13 @@ class hashtable
      */
     bool search(const std::string& target,field f);
 
+    /**
+     * @brief getter of error_opening_file 
+     * checks if file opened sucessfuly to read data of videogames
+     * @return true for sucess and false for failure 
+     */
 
+    bool OpenedFile();
     /**
      * @brief search function used to search all tables to find data based on the given field
      */
@@ -72,6 +97,8 @@ class hashtable
 
 
     size_t hash(const std::string& ID);
+
+    bool error_opening_file;
 
 
 };
