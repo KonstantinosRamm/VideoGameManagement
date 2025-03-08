@@ -1,7 +1,13 @@
 # VideoGameManagement
 
 ## todo: 
-*implement destructor to store changes in Library.txt by retrieving GameID table (for more legit results since each game should have a game id)
+* implement menu with operations: 
+* insert
+* delete
+* print
+* search keyword
+* search field
+* exit
 
 
 ## challenges faced so far
