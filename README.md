@@ -1,13 +1,9 @@
 # VideoGameManagement
 
 ## todo: 
-* implement menu with operations: 
-* insert
-* delete
-* print
-* search keyword
+
 * search field
-* exit
+
 
 
 ## challenges faced so far

@@ -61,6 +61,9 @@ int main(void)
             games.printTable();
         }//search keyword
         else if (option_buffer == "4"){
+            std::cout << " Enter a keyword : ";
+            std::getline(std::cin,keyword_buffer);
+            games.searchAllFields(keyword_buffer);
 
         }//search based on field and keyword
         else if (option_buffer == "5"){
