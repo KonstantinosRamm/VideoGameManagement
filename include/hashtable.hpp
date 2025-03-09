@@ -41,6 +41,8 @@ class hashtable
     bool insert(const game& g);
 
 
+
+
     /**
      * @brief checks 
      */
@@ -79,7 +81,14 @@ class hashtable
      * @return true for sucess and false for failure 
      */
 
-    bool OpenedFile();
+    bool notOpenedFile();
+
+
+
+    /**
+     * @brief print all contetns of GameID table */
+    void printTable();
+
     /**
      * @brief search function used to search all tables to find data based on the given field
      */
@@ -106,5 +115,13 @@ class hashtable
 
     bool error_opening_file;
 
+
+    /**
+     * @brief checks if the current Game ID alread exists in the hash table
+     * @param g game to check 
+     * @param hash index to check
+     * @return true if already existent
+     */
+    bool checkGameID(const game &g,size_t hash);
 
 };

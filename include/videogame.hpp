@@ -3,6 +3,7 @@
 #include <array>
 #include "color.hpp"
 #include <iostream>
+#include <map>
 #define NUMBER_OF_FIELDS 4
 const std::string EMPTY = "";//defined as std::string since defining by macro causes issues to conditional comparisons
 
@@ -17,6 +18,12 @@ enum field{
     Publisher,
     ReleaseYear
 };
+
+/**
+ * @brief extract the string names of the field enum
+ */
+//defined at videogame.cpp to avoid conflicts on the compiler on compilation
+extern std::array<std::string,NUMBER_OF_FIELDS> fieldToString;
 
 
 
@@ -48,6 +55,18 @@ struct game{
      * @param os instance of ostream object (std::cout)
      */
     friend std::ostream& operator << (std::ostream& os,const game & g);
+
+    /**
+     * @brief read game from user
+     */
+    void readGame();
+
+
+    /**
+     * @brief clear game fields to ensure not invalid field values inserted after each iteration of the main loop
+     */
+
+     void clear();
 
 
 

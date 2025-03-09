@@ -92,7 +92,7 @@ hashtable::~hashtable()
 }
 
 
-bool hashtable::OpenedFile()
+bool hashtable::notOpenedFile()
 {
     return this->error_opening_file;
 }
@@ -172,11 +172,27 @@ size_t hashtable::hash(const std::string& ID)
 
 }
 
+//check if game ID already in hash table
+bool hashtable::checkGameID(const game &g,size_t hash)
+{
+    node *temp = this->table[GameID][hash].getHead();
+
+    while(temp != nullptr)
+    {
+        if(temp->data.Game[GameID] == g.Game[GameID])
+        {
+            return true;
+        }
+        temp = temp->next;
+    }
+    return false;
+}
+
 
 //Insert method
 bool hashtable::insert(const game& g)
 {
-
+    node *temp;
     bool result = false;
     //hash the index based on field 
     size_t index = 0;
@@ -185,11 +201,18 @@ bool hashtable::insert(const game& g)
     for(int i = 0; i < NUMBER_OF_FIELDS; i++)
     {
         
+
+        
         //check if the entry is empty
         if(g.Game[i] != EMPTY)
         {
             //calculate the index 
             index = hash(g.Game[i]);
+            //first check if GameID already exists
+            if(i == 0 && checkGameID(g,index)){
+                result = false;
+                return result;
+            }
             result = this->table[i][index].insert(g);
         }
     }
@@ -260,13 +283,32 @@ bool hashtable::searchAllFields(const std::string& target)
 }
 
 
-//search function  1 field
+//search function for 1 field
 bool hashtable::search(const std::string& target,field f)
 {
 
     size_t index = hash(target);
     std::cout << "--------------------------------------------------------------" << std::endl;
     return this->table[f][index].searchNode(target,f);
+}
+
+
+void hashtable::printTable()
+{
+    size_t ctr = 1;
+    node * temp;
+    for(int i = 0; i < TABLE_SIZE; i++)
+    {
+        //retrieve all games from game id since game id is the most reliable way to extract games ( Game ID is Required)
+        temp = this->table[GameID][i].getHead();
+
+        while(temp != nullptr)
+        {
+            std::cout << ctr << " : " << temp->data;
+            ctr++;
+            temp = temp->next;
+        }
+    }
 }
 
 
