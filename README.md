@@ -2,8 +2,8 @@
 
 ## todo: 
 
-* search field
-
+* the read and right operations of the file end up with duplicates 
+so somewhere the i suspect the file doesnt close properly
 
 
 ## challenges faced so far
