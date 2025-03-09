@@ -13,6 +13,7 @@
 int main(void)
 {
     hashtable games;
+    game g;
     std::string option_buffer;
     std::string field_buffer;
 
@@ -46,7 +47,7 @@ int main(void)
 
         }//exit
         else if (option_buffer == "6"){
-            exit(0);
+            return 0;
         }//invalid option
         else{
             std::cerr << ERROR << "[ERROR] INVALID OPTION" << RESET << std::endl;
