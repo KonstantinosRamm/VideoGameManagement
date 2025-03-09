@@ -15,7 +15,7 @@ std::ostream& operator<<(std::ostream& os, const game& g)
     os << SUCCESS;
     for (int i = 0; i < NUMBER_OF_FIELDS; i++)
     {
-        os << g.Game[i] << " ";
+        os << g.Game[i] << "|";
         
     }
     
@@ -67,5 +67,17 @@ void game::clear()
     {
         this->Game[i] = EMPTY;
     }
+}
+
+
+
+void game::getField()
+{
+    std::cout << std::endl;
+    for(int i = 0; i < NUMBER_OF_FIELDS; i++)
+    {
+        std::cout << "\t" << i+1 << "):" << fieldToString[i] << std::endl;
+    }
+    std::cout << "\t: "; 
 }
 

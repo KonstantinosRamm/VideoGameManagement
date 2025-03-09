@@ -2,11 +2,27 @@
 #include <string>
 #include <cstdlib>
 #include <limits>
+#include <cctype>
 #include "hashtable.hpp"
 #include "ll.hpp"
 #include "videogame.hpp"
 #include "color.hpp"
 #include "platform.hpp"
+
+
+/**
+ * @brief checks if a strings is a legit number
+ * @param str the string to check 
+ * @return true if its a number 
+ * 
+ */
+bool isLegitNumber(const std::string& str);
+
+
+
+
+
+
 
 
 
@@ -67,6 +83,27 @@ int main(void)
 
         }//search based on field and keyword
         else if (option_buffer == "5"){
+            std::cout << " Enter a keyword : ";
+            std::getline(std::cin,keyword_buffer);
+            std::cout << std::endl;
+            std::cout << "Enter Field: ";
+            g.getField();
+            std::getline(std::cin,field_buffer);
+
+            //check if number is legit
+            if(isLegitNumber(field_buffer))
+            {
+                //convert string to number and then typecast it to field
+                size_t f = std::stoul(field_buffer);
+
+                //since the indexing starts from 0 but for convenience in main program we start from 1 
+                //we have to check if its not 0 to substract 1 otherwise we will not get the correct field
+                //and if 0 we will get underflow 
+                if(f > 0) f--;
+                
+                games.search(keyword_buffer,static_cast<field>(f));
+            }
+            
 
         }//exit
         else if (option_buffer == "6"){
@@ -89,4 +126,51 @@ int main(void)
 
     }
 return 0;
+}
+
+
+
+
+bool isLegitNumber(const std::string& str)
+{
+    //check if string is empty
+    if(str.empty())
+    {
+        return false;
+    }
+
+    //iterate in string and check for non digit characters
+    for (char c : str)
+    {
+        if(!isdigit(c))
+        {
+            return false;
+        }
+    }
+
+    //final check that the number does not exceed maximum number of fields
+    try {
+        // Convert string to size_t
+        size_t number = std::stoul(str); // Throws out of range or invalid number
+        
+        // Final check that the number does not exceed maximum number of fields
+        // and number is not 0 since we work with size_t and will cause underflow in the main program
+        if(number >= NUMBER_OF_FIELDS || number == 0)
+        {
+            return false;
+        }
+
+        // If everything passes
+        return true;
+    }
+    catch (const std::invalid_argument& e) {
+        // String does not represent a valid number
+        return false;
+    }
+    catch (const std::out_of_range& e) {
+        // Number is out of range for size_t
+        return false;
+    }
+
+    return true;
 }

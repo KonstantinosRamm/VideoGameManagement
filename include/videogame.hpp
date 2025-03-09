@@ -68,6 +68,11 @@ struct game{
 
      void clear();
 
+     /**
+      * @brief print available fields
+      */
+     void getField();
+
 
 
 
