@@ -7,3 +7,7 @@
 #define SUCCESS "\033[32m" // code for green color to indicate success
 
 #define INFO "\033[38;5;214m" // code for info (orange color)
+
+#define TITLE "\033[34m" // blue color
+
+#define OPTIONS "\033[36m" // cyan color
