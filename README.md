@@ -1,7 +1,7 @@
 # VideoGameManagement
 
 ## Project Description
-Developed a video game management system using C++ that efficiently manages video game data through insertion, deletion, and search functionalities. The system employs multiple hash tables—one for each field of the video game data—for more advanced and efficient searching. I implemented custom data structures, including hash tables and linked lists, to practice and reinforce my understanding of core data structures. Additionally, I implemented the Murmur32 hash function to optimize hash table operations.
+Developed a video game management system using C++ that efficiently manages video game data through insertion, deletion, and search functionalities. The system employs multiple hash tables—one for each field of the video game data—for more advanced and efficient searching. I implemented custom data structures, including hash tables and linked lists, to practice and reinforce my understanding of core data structures. Additionally, I implemented the Murmur32 hash function to optimize hash table operations.Finally i used Doxygen in order to practice creating Documentation.
 
 The system is designed with the goal of enabling users to search for a game or a keyword based on a given field, or to search for all entries containing the exact keyword. This allows for flexible and powerful search capabilities across various fields in the database.
 
@@ -30,7 +30,8 @@ The system is designed with the goal of enabling users to search for a game or a
 * Murmur32 hashing
 * File I/O
 * Object-Oriented Programming
-* Debugging
+* Debugger
+* Doxygen
 
 
 ## Prerequisites
@@ -61,7 +62,7 @@ cmake .. && make
 ```
 
 # Additional Notes
-* If this is the first time running the program you will get :[ERROR] Error occured while opening file.This is because the Library file that is used to store the games is not initialized yet.after that you can rerun and you should be good to go.
+* If this is the first time running the program you will get :[ERROR] Error occured while opening file.This is because the Library file that is used to store the games is not initialized yet.After that you can rerun and you should be good to go.
 
 
 
