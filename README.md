@@ -45,11 +45,14 @@ cmake .. && make
 ```
 
 # How to run:
-If this is the first time running the program you will get :[ERROR] Error occured while opening file.This is because the Library file that is used to store the games is not initialized yet.after that you can rerun and you should be good to go.
 
 ```bash
 ./bin/VideoGameManagement
 ```
+
+# Additional Notes
+If this is the first time running the program you will get :[ERROR] Error occured while opening file.This is because the Library file that is used to store the games is not initialized yet.after that you can rerun and you should be good to go.
+
 
 
 
