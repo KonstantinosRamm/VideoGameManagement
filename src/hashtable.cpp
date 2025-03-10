@@ -58,9 +58,13 @@ hashtable::hashtable()
 //destructor
 hashtable::~hashtable()
 {
+    // Clear file content first
+    std::ofstream output("bin/Library.txt", std::ios::out | std::ios::trunc);
+    output.close();  // Close after clearing the file
+    
+    // Open the file again for writing
+    output.open("Library.txt", std::ios::out);
 
-    //output file std::ios::out and std::ios::trunc used to create the file if it doesnt exist and trunc to delete all previous content
-    std::ofstream output("Library.txt",std::ios::out | std::ios::trunc);
 
     std::string input_buffer;
     std::cout << INFO << "[INFO] Saving..." << RESET << std::endl;

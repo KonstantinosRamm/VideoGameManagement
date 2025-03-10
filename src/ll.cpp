@@ -28,18 +28,36 @@ linkedlist::~linkedlist()
 //insert method
 bool linkedlist::insert(const game &g)
 {
-    node * temp = new node ;
-    //check for allocation fail
-    if(!temp)
+    // Allocate new node
+    node *temp = new node;
+    
+    // Check for allocation failure
+    if (!temp)
     {
-        std::cerr << ERROR << "[ERROR] An error occured during the insertion" << RESET << std::endl;
+        std::cerr << ERROR << "[ERROR] An error occurred during the insertion" << RESET << std::endl;
         return false;
     }
+
+    // Traverse the list to check for duplicates
+    node *current = this->head.next;
+    while (current != nullptr)
+    {
+        if (current->data.Game[GameID] == g.Game[GameID]) // Assuming GameID is the unique identifier
+        {
+            delete temp; // Free allocated memory since we don't need the node
+            return false; // Duplicate found
+        }
+        current = current->next;
+    }
+
+    // No duplicate found, so insert the new node
     temp->data = g;
     temp->next = this->head.next;
-    head.next = temp;
+    this->head.next = temp; // Insert at the beginning of the list
+
     return true;
 }
+
 
 
 //delete node method 
